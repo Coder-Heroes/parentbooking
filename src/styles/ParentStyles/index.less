@@ -1,0 +1,436 @@
+@h1: 4rem;
+@h2: 3rem;
+@h3: 2.5rem;
+
+//****Banner styles (in components common folder)*****
+.dashboard-banner {
+  display: flex;
+  background-color: @body__bg--blue;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  height: 12vh;
+}
+
+.dashboard {
+  display:flex;
+  flex-direction: column;
+}
+
+.banner-content {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+
+  h1 {
+    display: flex;
+    align-items: center;
+    font-size: @h1;
+    font-family: @text__font-family--header;
+    line-height: @text__line-height--h1;
+    color: @text__color--white;
+    width: 100%;
+    margin: auto;
+  }
+
+  .welcome-content {
+    display: none;
+    z-index: -1;
+  }
+}
+
+//****Parent-Navbar styles****
+.parent-navbar-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: @body__bg--peach;
+}
+
+.parent-navbar {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  width: 75%;
+  border: none;
+  background-color: @body__bg--peach;
+}
+
+.parent-navbar-items {
+  width: 20%;
+}
+
+.dropStudent {
+  background-color: white;
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: @body__bg--peach;
+}
+
+//****FamilyPage styles****
+.family-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border: none;
+  font-family: @text__font-family;
+  height: 100%;
+  button {
+    border: none;
+    border-radius: @btn__border-radius;
+    text-transform: uppercase;
+    font-weight: bold;
+    width: 100%;
+  }
+}
+
+.family-cards {
+  display: flex;
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+  background-color: @body__bg--white;
+  border-radius: 0.938em;
+  margin: 5% auto;
+  border: none;
+}
+
+.card-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 100%;
+  margin: 8% auto;
+
+  .card-name {
+  text-align: center;
+}
+}
+
+.tab_container {
+  // display: flex;  
+  background-color: #edeed7;  
+}
+.tab_container > div {
+  background-color: #f1f1f1;
+  margin: 20px 0px  20px 50px;
+  
+  font-size: 30px;
+}
+
+.card-name {
+  font-size: 1rem;
+  width: 100%;
+  color: @text__color--black;
+}
+
+.student .card-name {
+  margin-bottom: 30%;
+}
+
+.avatar {
+  width: 9.5em;
+  height: 9.5em;
+  border: 0.75rem solid @body__bg--blue;
+  border-radius: 6.25em;
+  background-size: auto;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.parent {
+  .card();
+  .card-name {
+    color: @text__color--white;
+  }
+  background-color: @body__bg--blue;
+  color: @text__color--white;
+  border-radius: 0.938em 0 0 0.938em;
+  padding-bottom: 3%;
+  .avatar {
+  border: 0.625em solid @body__bg--white;
+  background-color: @footer__bg;
+  }
+}
+
+.student {
+  .card();
+  background-color: @body__bg--white;
+  border: none;
+  border-radius: 0.938em;
+}
+
+.card {
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  // flex-direction: column;
+  // width: 350px;
+}
+
+.tab_container{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.add-student-button {
+  background-color: @btn__bg--orange;
+  color: @text__color--white;
+}
+
+.student-view-account-button {
+  background-color: @body__bg--blue;
+  color: @text__color--white;
+}
+
+.parent-view-account-button {
+  color: @text__color--maroon;
+  background-color: @btn__bg--white;
+  margin: 5%;
+}
+
+//****Parent-Progress styles****
+.progress-container {
+  display:flex;
+  flex-direction: column;
+}
+.progress-bars {
+  font-size: 50px;
+  padding: 0% 10%;
+  display:flex;
+  flex-direction: row;
+}
+
+.progress-bar {
+  font-size: 30px;
+  padding: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  size: large;
+}
+
+//****Parent-Navbar styles****
+.parent-navbar {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  border: none;
+}
+.parentNavItem {
+  margin:left 5%;
+}
+
+.parentNavItem {
+  margin-left: 5%;
+}
+
+.dropStudent {
+  padding: 12% 30%;
+  background-color: white;
+}
+
+//****Parent-Tasks styles****
+.navDrop {
+  display:flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+}
+
+.classCard {
+  margin: 5%;
+  border-radius: 2%;
+}
+
+//****Parent-Resources styles****
+
+.cardContainer {
+  display: flex;
+  flex-direction: row;
+  flex-flow: nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.artImg {
+  width: 100%;
+  padding-bottom: 5%;
+}
+
+.resourceCard {
+  width: 25%;
+  height: 25vh;
+  display: flex;
+  flex-direction: column;
+  flex-flow: nowrap;
+  justify-content: center;
+  margin-top: 5%;
+  border-radius: 5%;
+}
+
+// Create New Student Modal
+.create-new-student-modal {
+  position: absolute;
+  border: 0.063em solid black;
+  border-radius: 0.625em;
+  background: @body__bg--white;
+  height: 35em;
+  width: 30em;
+  margin: 5em 10em 10em 10em;
+  top: 5em;
+  left: 40%;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.create-new-student-title {
+  margin: 1em;
+}
+
+.create-new-student-exit {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 1.25em;
+  margin: -2em 0 0 18em;
+  height: 2em;
+  width: 2em;
+  cursor: pointer;
+}
+
+.exit {
+  display: flex !important;
+  justify-content: flex-end !important;
+  font-size: 1.25em !important;
+  margin: -2em 0 0 18em !important;
+  height: 2em !important;
+  width: 2em !important;
+  cursor: pointer !important;
+}
+
+.create-new-student-form {
+  display: flex;
+  flex-direction: column;
+  margin: 1em;
+}
+
+.create-new-student-submit {
+  display: flex;
+  justify-content: center;
+}
+
+//****Current Courses Details Modal****
+.current-courses-details-modal {
+  position: absolute;
+  z-index: 3;
+  top: 15em;
+  left: 20%;
+}
+
+.current-courses-details-exit {
+  font-size: 1.25em;
+  height: 2em;
+  width: 2em;
+  position: absolute;
+  z-index: 4;
+  top: 11em;
+  left: 75%;
+  cursor: pointer;
+}
+
+.news-container {
+  padding: 5%;
+}
+
+//****Parent-Progress styles****
+.progress-bars {
+  font-size: 50px;
+  padding: 0% 10%;
+  display: flex;
+  flex-direction: row;
+}
+
+.progress-bar {
+  font-size: 30px;
+  padding: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  size: large;
+}
+
+//****Parent-Tasks styles****
+.navDrop {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.classCard {
+  margin: 5%;
+}
+
+//****Parent-Resources styles****
+
+.cardContainer {
+  display: flex;
+  flex-direction: row;
+  flex-flow: nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.artImg {
+  width: 100%;
+  padding-bottom: 5%;
+}
+
+.resourceCard {
+  width: 25%;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  flex-flow: nowrap;
+  justify-content: center;
+  margin-top: 5%;
+}
+
+//****Cart styles**** 
+
+.cart-content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.achievements{
+background: no-repeat;
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center center;
+
+
+  // background: url('../../img/Assets/achievements.png');
+
+}

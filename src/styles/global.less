@@ -1,0 +1,63 @@
+html {
+  display: flex;
+  flex-direction: column;
+}
+
+//****Parent and Instructor Sidebar Styles****
+.ant-menu-item {
+  ant-icon {
+    color: orange;
+  }
+}
+.dashboard-logo {
+  color: orange;
+}
+.ant-menu-item-selected{
+  color: #fff !important;
+  background-color: rgb(254,174,40) !important;
+}
+
+.ant-menu-item-selected span a, .ant-menu-item-active span a:hover {
+  color: #fff !important;
+}
+
+// Parent and Instructor Sidebar Styles
+
+.ant-menu-item-active {
+  background-color: rgb(254,174,40);
+  color: white !important;
+  border-radius: 0px;
+}
+
+.ant-menu-item a, .ant-menu-item::before {
+  color: #595959 !important;
+}
+
+.ant-menu-vertical .ant-menu-item::after, .ant-menu-vertical-left .ant-menu-item::after, .ant-menu-vertical-right .ant-menu-item::after, .ant-menu-inline .ant-menu-item::after {
+  border-right: 0px solid rgb(34, 34, 34) !important;
+}
+
+.ant-menu-item-active-selected::after {
+  color: red;
+  color: grey;
+}
+.ant-menu-item-selected::after {
+  color: rgba(116, 0, 73, 0.8);
+}
+.dashboard-icon {
+  color: grey;
+}
+.link {
+  color: grey;
+}
+.title {
+  font-family: @text__font-family--header;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+.social-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+}

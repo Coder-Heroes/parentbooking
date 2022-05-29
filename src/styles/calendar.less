@@ -1,0 +1,163 @@
+// -------- CALENDAR COMPONENT, MODAL STYLED AT BOTTOM --------
+
+.calendar-event-button.ant-btn {
+  background-color: #fcdfaa;
+  position: absolute;
+  right: 5%;
+  top: 7.8%;
+  width: fit-content;
+  padding: 0 5%;
+  color: #f27712;
+  font-weight: bold;
+}
+
+.ant-picker-calendar-header {
+  justify-content: flex-start;
+  margin: 0 2%;
+  div {
+    background-color: #f1c461;
+    color: #f27712;
+  }
+}
+
+.ant-radio-button-wrapper {
+  background-color: #fcdfaa;
+  color: #f27712;
+}
+.ant-radio-button-wrapper-checked {
+  background-color: #f1c461;
+  color: white;
+}
+
+thead {
+  background-color: #fcdfaa;
+}
+
+th {
+  padding: 2rem;
+}
+
+thead tr th {
+  color: #f27712;
+}
+
+ul {
+  background-color: transparent;
+}
+
+.ant-badge-not-a-wrapper {
+  text-align: center;
+  margin-top: 5%;
+  padding: 4px 16px;
+  width: 100%;
+  .ant-badge-status-text {
+    color: black;
+    margin-left: 0;
+  }
+}
+.ant-badge-not-a-wrapper:nth-of-type(1) {
+  margin-top: 0;
+}
+
+.success-class-event,
+.warning-class-event,
+.error-class-event {
+  border-radius: 9999px;
+}
+
+.success-class-event {
+  background-color: rgba(0, 202, 183, 0.25);
+}
+
+.warning-class-event {
+  background-color: #faad14;
+}
+
+.error-class-event {
+  background-color: salmon;
+}
+
+.ant-badge-status-dot {
+  display: none;
+}
+
+.ant-picker-calendar {
+  overflow: hidden;
+  padding: 2%;
+}
+
+.ant-picker-panel {
+  border: 2px solid #fbecd1;
+  border-radius: 5rem;
+  overflow: hidden;
+}
+
+.ant-picker-body {
+  padding: 0;
+}
+
+td.ant-picker-cell {
+  border: 2px solid #fbecd1;
+}
+
+.ant-picker-cell-inner {
+  border-top: none;
+  padding: none;
+  margin: 0;
+  background-color: #faf9f8;
+  .ant-picker-calendar-date:hover {
+    background-color: #096a70;
+    color: white;
+  }
+}
+
+.ant-picker-calendar-date:hover {
+  background-color: #096a70;
+  div,
+  ul span {
+    color: white;
+  }
+}
+
+tr:nth-of-type(6) {
+  td {
+    border-bottom: none;
+  }
+}
+
+div.ant-picker-calendar-date-value {
+  color: #f27712;
+}
+
+// ---------- MODAL ----------
+.ant-picker-date-panel {
+  width: fit-content;
+  div.ant-picker-header {
+    width: min-content;
+  }
+}
+
+.ant-picker-dropdown div.ant-picker-panel {
+  border-radius: 0px;
+}
+
+.ant-picker-ok button {
+  position: relative;
+}
+
+.calendar-event-modal .ant-modal-footer {
+  text-align: center;
+  :hover {
+    color: rgba(0, 0, 0, 0.65);
+  }
+  .ant-btn-primary {
+    background-color: #fcdfaa;
+    color: rgba(0, 0, 0, 0.65);
+    margin-left: 0;
+  }
+  button {
+    border: 1px solid rgba(0, 0, 0, 0.65);
+    width: auto;
+    margin: 0 4%;
+  }
+}
