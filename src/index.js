@@ -14,13 +14,22 @@ import { applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 
+
 import ParentBooking from './components/pages/ParentBooking';
 
 ReactDOM.render(
   <Router>
     <React.StrictMode>     
-      <Layout>  
-        <App />            
+      <Layout
+          style={{
+            minHeight: '100vh',
+            display: 'flex',
+            flexDirection: 'column',
+          }}
+      > 
+        
+        <App /> 
+                 
       </Layout>    
     </React.StrictMode>
   </Router>,
