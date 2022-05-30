@@ -1,22 +1,40 @@
+import React, { useEffect, useState } from 'react';
 import { Tabs } from 'antd';
-const { TabPane } = Tabs;
 
-const onChange = (key) => {
-  console.log(key);
-};
+import ParentBookingCard from './ParentBookingCard';
 
-const ParentBookingContainer = props => (     
-    <Tabs defaultActiveKey="1" onChange={onChange} className= "tabs-container">
-      <TabPane tab="Tab 1" key="1" >
-        Content of Tab Pane 1
-      </TabPane>
-      <TabPane tab="Tab 2" key="2">
-        Content of Tab Pane 2
-      </TabPane>
-      <TabPane tab="Tab 3" key="3">
-        Content of Tab Pane 3
+const ParentBookingContainer = props => {
+  
+  const { bookings, isFetching, error } = props.bookings;
+  const [currentTab, setCurrentTab] = useState(bookings);  
+  const { TabPane } = Tabs;
+
+  console.log("currentTab: ",currentTab);
+
+  const onChange = (key) => {
+    console.log(key);
+  };
+
+  const tabs = [{ title: 'All' }, { title: 'Today' }, { title: 'This Week' }];
+  
+  useEffect(() => {    
+    setCurrentTab(bookings);
+  }, []); // eslint-disable-line
+
+  return (     
+    <Tabs defaultActiveKey="0" onChange={onChange} centered>
+      {tabs.map((item, index) => (
+        <TabPane tab={item.title} key={index}>
+          {currentTab && currentTab.map((item, idx) =>
+              <ParentBookingCard key={idx} booking={item} />              
+          )},      
+        </TabPane>
+      ))}      
+      <TabPane tab="My Courses" key="3">
+        Content of My Courses
       </TabPane>
     </Tabs>  
-);
+  );
+}
 
 export default ParentBookingContainer;

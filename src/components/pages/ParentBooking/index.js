@@ -2,13 +2,17 @@ import { Layout } from 'antd';
 
 import ParentBookingContainer from './ParentBookingContainer';
 
-function ParentBooking() {
+function ParentBooking(props) {
+
+  const { parentDummyData } = props;
+  const { bookings } = parentDummyData;  
+
     const { Content } = Layout;
   
     return (
       <Layout>        
         <Content>  
-          <ParentBookingContainer className="booking-container" />
+          <ParentBookingContainer bookings = { bookings } />
         </Content>
       </Layout>
     );
