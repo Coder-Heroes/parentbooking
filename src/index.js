@@ -17,6 +17,7 @@ import thunk from 'redux-thunk';
 
 
 import ParentBooking from './components/pages/ParentBooking';
+import { parentDummyData } from './parentDummyData'
 
 const store = createStore(rootReducers, applyMiddleware(thunk));
 
@@ -45,7 +46,8 @@ function App() {
   return (
     <Layout.Content style={{ display: 'flex', justifyContent: 'center' }}>
         <Switch>
-        <Route path="/parent/booking" component={ParentBooking} />    
+        {/* <Route path="/parent/booking" component={ParentBooking} />     */}
+        <Route path="/parent/booking"> <ParentBooking parentDummyData = { parentDummyData } /> </Route> 
         </Switch>
     </Layout.Content>
   )  
