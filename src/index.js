@@ -10,34 +10,38 @@ import {
 
 import './index.css';
 import { Layout } from 'antd';
-import { applyMiddleware } from 'redux';
+import { applyMiddleware, createStore } from 'redux';
 import { Provider } from 'react-redux';
+import rootReducers from './redux/reducers/index';
 import thunk from 'redux-thunk';
 
 
 import ParentBooking from './components/pages/ParentBooking';
 
+const store = createStore(rootReducers, applyMiddleware(thunk));
+
 ReactDOM.render(
-  <Router>
-    <React.StrictMode>     
-      <Layout
-          style={{
-            minHeight: '100vh',
-            display: 'flex',
-            flexDirection: 'column',
-          }}
-      > 
-        
-        <App /> 
-                 
-      </Layout>    
-    </React.StrictMode>
-  </Router>,
-  document.getElementById('root')
+  <Provider store={store}>
+    <Router>
+      <React.StrictMode>     
+        <Layout
+            style={{
+              minHeight: '100vh',
+              display: 'flex',
+              flexDirection: 'column',
+            }}
+        >        
+          <App />                 
+        </Layout>    
+      </React.StrictMode>
+    </Router>
+  </Provider>,
+  document.getElementById('root')  
 );
 
 function App() { 
   const history = useHistory();
+  
   return (
     <Layout.Content style={{ display: 'flex', justifyContent: 'center' }}>
         <Switch>
